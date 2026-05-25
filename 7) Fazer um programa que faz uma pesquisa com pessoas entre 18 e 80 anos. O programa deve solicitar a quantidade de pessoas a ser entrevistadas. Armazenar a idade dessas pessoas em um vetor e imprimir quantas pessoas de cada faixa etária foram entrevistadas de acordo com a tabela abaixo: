@@ -1,0 +1,87 @@
+7) Fazer um programa que faz uma pesquisa com pessoas entre 18 e 80 anos. O programa deve solicitar a quantidade de pessoas a ser entrevistadas. Armazenar a idade dessas pessoas em um vetor e imprimir quantas pessoas de cada faixa etária foram entrevistadas de acordo com a tabela abaixo:   
+
+  
+
+>= 18 e < 35    jovem  
+
+>=35 e <65    adulto  
+
+>= 65   idoso  
+
+  
+
+O programa deve imprimir o quantitativo de jovens, adultos e idosos. Desta forma essas variáveis que irão contar deverão ser inicializadas com zero.   
+
+RESPOSTA: 
+
+#include <stdio.h> 
+
+  
+
+int main() { 
+
+  
+
+    int pessoas, i; 
+
+    int idade[100]; 
+
+  
+
+    int jovens = 0; 
+
+    int adultos = 0; 
+
+    int idosos = 0; 
+
+  
+
+    printf("Digite a quantidade de pessoas entrevistadas: "); 
+
+    scanf("%d", &pessoas); 
+
+  
+
+    for(i = 0; i < pessoas; i++) { 
+
+  
+
+        printf("Digite a idade da pessoa %d: ", i + 1); 
+
+        scanf("%d", &idade[i]); 
+
+  
+
+        if(idade[i] >= 18 && idade[i] < 35) { 
+
+            jovens++; 
+
+        } 
+
+        else if(idade[i] >= 35 && idade[i] < 65) { 
+
+            adultos++; 
+
+        } 
+
+        else if(idade[i] >= 65) { 
+
+            idosos++; 
+
+        } 
+
+    } 
+
+  
+
+    printf("\nQuantidade de jovens: %d\n", jovens); 
+
+    printf("Quantidade de adultos: %d\n", adultos); 
+
+    printf("Quantidade de idosos: %d\n", idosos); 
+
+  
+
+    return 0; 
+
+} 
