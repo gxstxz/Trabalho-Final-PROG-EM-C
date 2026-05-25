@@ -1,0 +1,61 @@
+5) Faça um programa que solicite o número de elementos de vetor, solicite os elementos e armazeno-os no vetor, e imprimia a quantidade de elementos pares e ímpares. 
+
+RESPOSTA: 
+
+#include <stdio.h> 
+
+  
+
+int main() { 
+
+  
+
+    int vetor[100]; 
+
+    int n, i; 
+
+    int pares = 0, impares = 0; 
+
+  
+
+    printf("Digite a quantidade de elementos do vetor: ") 
+
+    scanf("%d", &n); 
+
+  
+
+    for(i = 0; i < n; i++) { 
+
+  
+
+        printf("Digite o elemento %d: ", i + 1) 
+
+        scanf("%d", &vetor[i]); 
+
+  
+
+        if(vetor[i] % 2 == 0) { 
+
+            pares++; 
+
+        } else { 
+
+            impares++; 
+
+        } 
+
+    } 
+
+  
+
+    printf("Quantidade de números pares: %d\n", pares); 
+
+    printf("Quantidade de números ímpares: %d\n", impares); 
+
+  
+
+    return 0; 
+
+} 
+
+ 
