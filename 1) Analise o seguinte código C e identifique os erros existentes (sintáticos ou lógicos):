@@ -1,0 +1,35 @@
+1) Analise o seguinte código C e identifique os erros existentes (sintáticos ou lógicos):  
+
+#include <stdio.h>  
+
+  
+
+int main() {  
+
+    int i;  
+
+    for (i = 0; i < 5; i++)         if (i % 2 = 0) {  
+
+            printf("Número %d é par\n", i);  
+
+        }         else  
+
+            printf("Número %d é ímpar\n");  
+
+  
+
+    return 0 }  
+
+Pergunta:  
+
+Quantos erros de execução e sintaxe existem no código acima? Quais são eles?  
+ 
+RESPOSTA: 
+
+O código possui 3 erros 
+
+- No if, tinha = em vez de == para fazer a comparação. 
+
+- No printf do else, a variável i. 
+
+- Faltou o ponto e vírgula ; depois do return 0. 
