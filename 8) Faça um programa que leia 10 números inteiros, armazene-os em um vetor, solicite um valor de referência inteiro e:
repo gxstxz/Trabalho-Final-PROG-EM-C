@@ -1,0 +1,75 @@
+8) Faça um programa que leia 10 números inteiros, armazene-os em um vetor, solicite um valor de referência inteiro e:  
+
+imprima os números do vetor que são maiores que o valor referência  
+
+retorne quantas vezes o valor de referência aparece no vetor  
+
+RESPOSTA: 
+
+#include <stdio.h> 
+
+  
+
+int main() { 
+
+  
+
+    int vetor[10]; 
+
+    int i, referencia; 
+
+    int contador = 0; 
+
+  
+
+    for(i = 0; i < 10; i++) { 
+
+  
+
+        printf("Digite o %dº número: ", i + 1); 
+
+        scanf("%d", &vetor[i]); 
+
+    } 
+
+  
+
+    printf("Digite o valor de referência: "); 
+
+    scanf("%d", &referencia); 
+
+  
+
+    printf("\nNúmeros maiores que o valor de referência:\n"); 
+
+  
+
+    for(i = 0; i < 10; i++) { 
+
+  
+
+        if(vetor[i] > referencia) { 
+
+            printf("%d\n", vetor[i]); 
+
+        } 
+
+  
+
+        if(vetor[i] == referencia) { 
+
+            contador++; 
+
+        } 
+
+    } 
+
+  
+
+    printf("\nO valor %d apareceu %d vez(es) no vetor.\n", referencia, contador); 
+
+  
+
+    return 0; 
+
+} 
